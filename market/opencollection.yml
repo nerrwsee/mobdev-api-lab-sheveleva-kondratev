@@ -1,0 +1,27 @@
+opencollection: 1.0.0
+
+info:
+  name: marketplace
+config:
+  proxy:
+    inherit: false
+    config:
+      protocol: http
+      hostname: 10.0.55.52
+      port: 3128
+      auth:
+        username: ""
+        password: ""
+        disabled: true
+      bypassProxy: ""
+
+request:
+  variables:
+    - name: url
+      value: https://api.kitek-pg.ru/api/marketplace
+bundled: false
+extensions:
+  bruno:
+    ignore:
+      - node_modules
+      - .git

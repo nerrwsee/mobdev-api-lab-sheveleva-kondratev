@@ -1,0 +1,26 @@
+info:
+  name: Create item
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/items"
+  body:
+    type: json
+    data: |-
+      {
+        "title": "iPhone 14",
+        "description": "Новый iPhone 14 в идеальном состоянии, все аксессуары в комплекте",
+        "price": 80000,
+        "imageUrl": "https://example.com/iphone.jpg"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE3OTA3NjE2MTEwMTgsInVzZXJuYW1lIjoiYWJvYmEiLCJpYXQiOjE3OTA3NjE3MDYsImV4cCI6MTc5MDg0ODEwNn0.D0ng_MXlneJjqMu4EzXIaZlSUpLGRp1ul1ZDdnc6zNo
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,19 @@
+info:
+  name: Create bids
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/items/:id/bids"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
