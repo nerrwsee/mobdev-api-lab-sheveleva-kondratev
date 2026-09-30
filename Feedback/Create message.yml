@@ -1,0 +1,24 @@
+info:
+  name: Create message
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/messages"
+  headers:
+    - name: ""
+      value: ""
+  body:
+    type: json
+    data: |-
+      {
+        "content": "Текст сообщения (макс 500 символов)"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

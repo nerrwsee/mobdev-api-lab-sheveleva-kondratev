@@ -1,0 +1,19 @@
+info:
+  name: Delete Message
+  type: http
+  seq: 8
+
+http:
+  method: DELETE
+  url: "{{url}}/messages/:id"
+  params:
+    - name: id
+      value: ""
+      type: path
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

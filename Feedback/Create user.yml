@@ -1,0 +1,24 @@
+info:
+  name: Create user
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/auth/register"
+  body:
+    type: json
+    data: |-
+      {
+        "username": "asdasd123",
+        "password": "sasdasd123"
+      }
+  auth:
+    type: bearer
+    token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjE0LCJ1c2VybmFtZSI6ImFzZGFzZDEyMyIsImlhdCI6MTc5MDc1ODg0MCwiZXhwIjoxNzkwODQ1MjQwfQ.3svyG_awUmnuxmn0eRDuHPC27hjpxtkwly_kwFfJang
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
